@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #92bdff;
+    color: #333;
+}
+
+.container-principal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-principal h1 {
+    color: rgb(0, 68, 255);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.foto-perfil {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.container-informacoes {
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.container-informacoes h3 {
+    margin-top: 10px;
+}
+
+.descricao {
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 1.5;
+}
+
+.container-redes-sociais {
+    margin-top: 30px;
+    text-align: center;
+    color: 0;
+}
+
+.container-redes-sociais h3 {
+    margin-bottom: 10px;
+}
+
+.container-redes-sociais ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container-redes-sociais li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.container-redes-sociais a {
+    text-decoration: none;
+    color: #013cff;
+    font-weight: bold;
+}
+
+.container-redes-sociais a:hover {
+    text-decoration: underline;
+}
