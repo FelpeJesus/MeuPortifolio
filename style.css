@@ -1,0 +1,522 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #5F9EA0, #4682B4); /* Gradiente de CadetBlue para SteelBlue */
+    color: #f0f0f0; /* Um branco um pouco mais suave */
+}
+
+/* --- Estilos do Header/Menu --- */
+.navbar {
+    /* Efeito Glassmorphism */
+    background-color: rgba(47, 79, 79, 0.75); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+    padding: 10px 20px; /* Espaçamento interno */
+    position: fixed; /* Fixa o menu no topo */
+    top: 0; /* Fixa no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Espaça logo e nav */
+    align-items: center; /* Alinha verticalmente */
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.logo {
+    display: flex; /* Usa flexbox para o logo */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.logo img {
+    height: 60px; /* Tamanho do logo */
+    margin-right: 20px; /* Espaço à direita */
+    transition: transform 0.3s; /* Transição suave */
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    cursor: pointer; /* Torna clicável */
+    filter: drop-shadow(0 0 4px MediumAquamarine); /* Adiciona um brilho na cor do tema */
+}
+
+.navbar nav {
+    flex-grow: 1; /* Permite que a navegação ocupe o espaço central */
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center; /* Centraliza os itens da lista */
+}
+
+.navbar nav ul {
+    list-style: none; /* Remove as bolinhas */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    display: flex; /* Deixa os itens horizontais */
+}
+
+.navbar nav ul li {
+    margin-left: 60px; /* Espaço entre os botões */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #fff; /* Cor branca */
+    font-weight: bold; /* Negrito */
+}
+
+.navbar .navbar-center a:hover {
+    color: wheat; /* Cor ao passar o mouse */
+    transition: color 0.3s; /* Transição suave */
+    text-decoration: none; /* Remove o sublinhado */ 
+    font-weight: bold; /* Negrito */
+    border-bottom: 4px solid wheat; /* Efeito de destaque ao passar o mouse */
+    border-radius: 4px ; /* Cantos arredondados */
+}
+
+.navbar a.active {
+    border-bottom: 4px solid teal; /* Indica a página atual */
+}
+
+.btn-orcamento {
+    background-image: linear-gradient(to right, #008080, #004d4d);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-orcamento svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.navbar a.btn-orcamento:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    background-image: linear-gradient(to right, #009688, #00695C);
+}
+
+/* --- Estilos Principais --- */
+.container-principal {
+    text-align: center; /* Centraliza o conteúdo */
+    padding-top: 120px; /* Espaço para o menu fixo */
+    margin-bottom: 50px; /* Espaço extra embaixo */
+}
+
+.container-principal h1 {
+    color: #ffffff;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.profissao {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.foto-perfil {
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%; /* Deixa redonda perfeitamente */
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Garante que a foto não estique */
+    margin-top: 20px;
+}
+
+/* --- Texto e Descrição --- */
+.container-informacoes {
+    max-width: 1000px; /* Largura máxima para melhor leitura */
+    margin: 0 auto; /* Centraliza o bloco de texto */
+    padding: 30px; /* Espaçamento interno */
+    background-color: rgba(47, 79, 79, 0.6); /* Fundo semitransparente */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 50px; /* Espaço adicionado abaixo do container */
+    color: #ffffff; /* Mudei para branco para ler no fundo preto */
+}
+
+.descricao {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- Estilos da Seção de Projetos --- */
+.portfolio-section {
+    padding-top: 100px; /* Espaço para o menu fixo */
+    padding-bottom: 50px;
+}
+
+.portfolio-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: rgba(47, 79, 79, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 8px 16px black; /* Sombra mais intensa */
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-content h3 {
+    margin-top: 0;
+    color: MediumAquamarine;
+}
+
+.project-card-content p {
+    flex-grow: 1;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: teal;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: darkcyan;
+    color: #fff; /* Garante que a cor do texto não mude do .navbar a:hover */
+}
+
+/* --- Estilos da Seção de Serviços --- */
+.services-section {
+    padding-top: 100px; /* Espaço para o menu fixo */
+    padding-bottom: 50px; /* Espaço inferior */
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(47, 79, 79, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-icon {
+    margin-bottom: 15px;
+}
+
+.service-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: MediumAquamarine;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: MediumAquamarine;
+}
+
+/* --- Estilos da Seção de Resumo (Timeline) --- */
+.resume-section {
+    padding-top: 0; /* Remove padding superior para seções seguidas */
+}
+
+.resume-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.timeline {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* A linha vertical da timeline */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: MediumAquamarine;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px; /* Espaçamento interno */
+    position: relative; /* Necessário para os círculos */
+    background-color: inherit; /* Herda o fundo */
+    width: 50%; /* Metade da largura da timeline */
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+/* Círculos na timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid MediumAquamarine;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Itens à esquerda */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Ajusta o círculo para os itens da esquerda */
+.timeline-item:nth-child(odd)::after {
+    right: -12px;
+}
+
+/* Itens à direita */
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* Ajusta o círculo para os itens da direita */
+.timeline-item:nth-child(even)::after {
+    left: -12px;
+}
+/* --- Rodapé --- */
+.rodape {
+    background-color: #1a1a1a;
+    padding: 40px 20px 20px 20px;
+    border-top: 3px solid MediumAquamarine;
+}
+
+.rodape-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.logo-rodape img {
+    max-width: 180px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Transforma o logo em branco */
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.logo-rodape a:hover img {
+    transform: scale(1.05);
+    filter: brightness(0) invert(1) drop-shadow(0 0 4px MediumAquamarine); /* Adiciona um brilho na cor do tema */
+}
+
+.logo-rodape {
+    align-self: center;
+}
+
+.rodape-coluna h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.rodape ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape ul li {
+    margin-bottom: 10px;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: MediumAquamarine;
+    transition: color 0.3s;
+}
+
+.rodape a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: MediumAquamarine;
+    transition: fill 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover svg {
+    fill: #fff;
+    transform: scale(1.1);
+}
+
+.rodape-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    /* --- Ajustes no Menu --- */
+    .navbar {
+        flex-direction: column; /* Empilha os itens do menu */
+        padding: 15px;
+        position: relative; /* Remove a posição fixa em telas pequenas */
+    }
+
+    .navbar-center {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column; /* Empilha os links da navegação */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar nav ul li {
+        margin-left: 0;
+    }
+
+    /* --- Ajustes no Conteúdo Principal --- */
+    .container-principal,
+    .portfolio-section,
+    .services-section {
+        padding-top: 20px; /* Reduz o espaçamento superior */
+    }
+
+    .container-principal h1 {
+        font-size: 2em;
+    }
+
+    .container-principal h2.profissao {
+        font-size: 1em;
+    }
+
+    .container-informacoes {
+        padding: 20px;
+    }
+
+    /* --- Ajustes na Timeline --- */
+    .timeline::after {
+        left: 31px; /* Move a linha da timeline para a esquerda */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left; /* Alinha todo o texto à esquerda */
+    }
+
+    .timeline-item::after {
+        left: 20px; /* Move os círculos para a linha */
+    }
+
+    /* --- Ajustes no Rodapé --- */
+    .rodape-container {
+        grid-template-columns: 1fr; /* Uma coluna para o rodapé */
+        text-align: center;
+    }
+
+    .logo-rodape {
+        justify-self: center; /* Centraliza o logo */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centraliza os ícones sociais */
+    }
+}
